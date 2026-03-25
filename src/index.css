@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Google Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+}
+
+body {
+  background-color: #14181c;
+  color: #9ab;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: #9ab;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #40bcf4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h1,
+h2,
+h3 {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}

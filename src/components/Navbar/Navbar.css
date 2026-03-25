@@ -1,0 +1,191 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 12px 30px;
+    background: #14181c;
+    border-bottom: 1px solid #2c3440;
+}
+
+/* Left & Right sections */
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+.nav-link {
+    color: #9ab;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+/* Center section → used only to position search */
+.navbar-center {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+/* Inbox Bell Icon */
+.inbox-bell {
+    position: relative;
+    font-size: 1.1rem;
+    text-decoration: none;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.inbox-bell:hover {
+    transform: scale(1.15);
+}
+
+.inbox-bell-badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background: #e00054;
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3px;
+    box-shadow: 0 0 0 2px #14181c;
+}
+
+
+.search-input {
+    width: 240px;
+    padding: 6px 12px;
+    background-color: #2c3440;
+    border: 1px solid #2c3440;
+    border-radius: 14px;
+    color: #fff;
+    font-size: 0.85rem;
+    outline: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.search-input::placeholder {
+    color: #678;
+}
+
+.search-input:focus {
+    background-color: #fff;
+    color: #14181c;
+}
+
+.register-btn {
+    padding: 6px 12px;
+    background-color: #445566;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+}
+
+.register-btn:hover {
+    background-color: #e00054;
+    color: #fff;
+}
+
+/* Avatar */
+.avatar-wrapper {
+    position: relative;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #445566;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.avatar:hover {
+    background-color: #e00054;
+}
+
+/* Dropdown */
+.avatar-wrapper {
+    position: relative;
+}
+
+.avatar-dropdown {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background-color: #445566;
+    border-radius: 4px;
+    padding: 6px;
+    min-width: 140px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.avatar-dropdown button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 6px 10px;
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.avatar-dropdown button:hover {
+    background-color: #e00054;
+}
+
+/* Show dropdown on hover */
+.avatar-wrapper:hover .avatar-dropdown,
+.avatar-dropdown:hover {
+    display: block;
+}

@@ -1,0 +1,224 @@
+.inbox-page {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+}
+
+/* ── Header ── */
+.inbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #2c3440;
+}
+
+.inbox-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.inbox-title-row h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.inbox-unread-pill {
+    background: #e00054;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+}
+
+.mark-all-btn {
+    background: transparent;
+    border: 1px solid #445566;
+    color: #9ab;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.mark-all-btn:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+/* ── Notification cards ── */
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notification-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: #1c2228;
+    border: 1px solid #2c3440;
+    border-radius: 8px;
+    padding: 16px 18px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    position: relative;
+}
+
+.notification-card.unread {
+    border-left: 4px solid #e00054;
+    background: #1f262e;
+}
+
+.notification-card.read {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.notification-card:hover:not(.read) {
+    background: #242c36;
+    border-color: #445566;
+}
+
+.unread-dot {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e00054;
+}
+
+.notif-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.notif-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.notif-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.notif-type-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #e00054;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.notif-time {
+    font-size: 0.78rem;
+    color: #8899aa;
+}
+
+.notif-content-title {
+    font-size: 0.94rem;
+    color: #cdd;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: italic;
+}
+
+.notif-reason-box {
+    background: #14181c;
+    border-left: 3px solid #445566;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.88rem;
+    color: #9ab;
+    line-height: 1.5;
+}
+
+.notif-reason-label {
+    font-weight: 700;
+    color: #8899aa;
+}
+
+/* ── Empty / Login states ── */
+.inbox-state-msg {
+    text-align: center;
+    color: #8899aa;
+    padding: 40px 0;
+}
+
+.inbox-empty {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.inbox-empty-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.inbox-empty h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 0 8px;
+}
+
+.inbox-empty p {
+    color: #8899aa;
+    font-size: 0.92rem;
+}
+
+.inbox-login-prompt {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.inbox-lock {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.inbox-login-prompt h2 {
+    color: #fff;
+    margin: 0 0 8px;
+}
+
+.inbox-login-prompt p {
+    color: #8899aa;
+    margin: 0 0 24px;
+}
+
+.inbox-login-btn {
+    background: #e00054;
+    color: #fff;
+    padding: 10px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.inbox-login-btn:hover {
+    background: #b40043;
+}

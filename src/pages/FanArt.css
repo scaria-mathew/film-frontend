@@ -1,0 +1,231 @@
+.fanart {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fanart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #2c3440;
+    padding-bottom: 15px;
+}
+
+.fanart-header h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.upload-btn {
+    background-color: #e00054;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: background 0.2s;
+}
+
+.upload-btn:hover {
+    background-color: #b40043;
+}
+
+/* Upload Form */
+.upload-form {
+    background-color: #1c2228;
+    padding: 25px;
+    border-radius: 4px;
+    border: 1px solid #2c3440;
+    margin-bottom: 40px;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.upload-form h3 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.upload-form input[type="text"],
+.upload-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #2c3440;
+    border-radius: 3px;
+    background-color: #14181c;
+    color: #9ab;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.upload-form input[type="text"]:focus,
+.upload-form select:focus {
+    border-color: #678;
+    color: #fff;
+}
+
+.upload-form input[type="file"] {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #9ab;
+}
+
+.image-preview {
+    margin-bottom: 20px;
+    max-width: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 2px solid #e00054;
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.upload-form button[type="submit"] {
+    background-color: #e00054;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.upload-form button[type="submit"]:hover {
+    background-color: #b40043;
+}
+
+.success-text {
+    color: #4cd137;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(76, 209, 55, 0.1);
+    border-radius: var(--radius);
+}
+
+.error-text {
+    color: #ff4d4f;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(255, 77, 79, 0.1);
+    border-radius: var(--radius);
+}
+
+/* Grid */
+.fanart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.fanart-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    border: 2px solid transparent;
+    /* space for hover */
+    transition: border-color 0.2s ease;
+}
+
+.fanart-card:hover {
+    border-color: #e00054;
+}
+
+.fanart-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.fanart-card:hover img {
+    transform: scale(1.05);
+}
+
+.fanart-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(20, 24, 28, 0.95) 0%, rgba(20, 24, 28, 0.7) 50%, transparent 100%);
+    padding: 20px 15px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.art-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: white;
+    font-family: 'Times', 'Playfair Display', serif;
+}
+
+.art-movie {
+    font-size: 0.85rem;
+    color: #9ab;
+    display: block;
+    margin: 4px 0;
+}
+
+.art-author {
+    font-size: 0.75rem;
+    color: #e00054;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.fanart-delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(224, 0, 84, 0.85);
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    transition: opacity 0.2s, background 0.2s;
+    backdrop-filter: blur(2px);
+}
+
+.fanart-card:hover .fanart-delete-btn {
+    opacity: 1;
+}
+
+.fanart-delete-btn:hover {
+    background: #ff4d4f;
+}

@@ -1,0 +1,164 @@
+.home-container {
+    background-color: #14181c;
+    min-height: 100vh;
+    color: white;
+}
+
+.hero-viewport {
+    position: relative;
+    height: 70vh;
+    /* slightly shorter hero */
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-track {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 70px;
+}
+
+.hero-backdrop {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #14181c 0%, rgba(20, 24, 28, 0.8) 15%, transparent 60%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 0 8%;
+    max-width: 800px;
+}
+
+.badge {
+    color: #e00054;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 5px;
+    font-family: 'Times', 'Playfair Display', serif;
+    /* Letterboxd title style */
+    font-weight: 700;
+}
+
+.hero-meta {
+    margin-bottom: 25px;
+    color: #9ab;
+    font-size: 0.95rem;
+}
+
+.rating {
+    color: #e00054;
+    font-weight: 600;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-main,
+.btn-outline {
+    padding: 8px 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: background-color 0.2s, color 0.2s;
+    letter-spacing: 0.05em;
+}
+
+.btn-main {
+    background: #e00054;
+    color: #fff;
+    border: 1px solid #e00054;
+}
+
+.btn-main:hover {
+    background: #b40043;
+    border-color: #b40043;
+    color: #fff;
+}
+
+.btn-outline {
+    background: #445566;
+    border: 1px solid #445566;
+    color: #fff;
+}
+
+.btn-outline:hover {
+    background: #5c738a;
+    border-color: #5c738a;
+    color: #fff;
+}
+
+.hero-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 8%;
+    z-index: 4;
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: rgba(153, 170, 187, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #fff;
+}
+
+.trending-container {
+    padding: 20px 8% 60px;
+}
+
+.section-title {
+    color: #9ab;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #2c3440;
+    padding-bottom: 6px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 15px;
+}

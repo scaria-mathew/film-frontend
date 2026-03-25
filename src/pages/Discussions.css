@@ -1,0 +1,272 @@
+/* Shared with original Discussions.css, modified for dynamic data */
+.discussions {
+    padding: 30px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.discussions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #2c3440;
+    padding-bottom: 15px;
+}
+
+.discussions-header h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.new-thread-btn {
+    background-color: #e00054;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: background 0.2s;
+}
+
+.new-thread-btn:hover {
+    background-color: #b40043;
+}
+
+/* NEW THREAD FORM */
+.new-thread-form {
+    background-color: #1c2228;
+    padding: 25px;
+    border-radius: 4px;
+    border: 1px solid #2c3440;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.new-thread-form h3 {
+    margin-bottom: 15px;
+}
+
+.new-thread-form input[type="text"],
+.new-thread-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #14181c;
+    border: 1px solid #2c3440;
+    border-radius: 3px;
+    color: #9ab;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.new-thread-form input[type="text"]:focus,
+.new-thread-form textarea:focus {
+    border-color: #678;
+    color: #fff;
+}
+
+.new-thread-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.checkbox-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.checkbox-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.ama-checkbox {
+    color: #e00054;
+    font-weight: 700;
+}
+
+.new-thread-form button[type="submit"] {
+    background-color: #445566;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: background 0.2s;
+}
+
+.new-thread-form button[type="submit"]:hover {
+    background-color: #5c738a;
+}
+
+.no-movie-selected {
+    text-align: center;
+    padding: 50px;
+    background-color: #1c2228;
+    border-radius: 4px;
+    border: 1px dashed #445566;
+    color: #678;
+    font-style: italic;
+}
+
+.discussion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.discussion-card {
+    background-color: #1c2228;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: 1px solid #2c3440;
+}
+
+/* Admin delete button on AMA/discussion cards */
+.admin-delete-btn {
+    flex-shrink: 0;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid #e74c3c;
+    background-color: transparent;
+    color: #e74c3c;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+.admin-delete-btn:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.discussion-card:hover {
+    background-color: #242c36;
+    border-color: #445566;
+}
+
+.ama-card {
+    border-left: 4px solid #e00054;
+}
+
+.card-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.ama-badge,
+.spoiler-badge,
+.closed-badge {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: white;
+}
+
+.ama-badge {
+    background-color: #e00054;
+}
+
+.spoiler-badge {
+    background-color: #ff4d4f;
+}
+
+.closed-badge {
+    background-color: #445566;
+}
+
+.discussion-info h3 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Times', 'Playfair Display', serif;
+}
+
+.thread-meta {
+    font-size: 0.85rem;
+    color: #8899aa;
+    margin: 0;
+}
+
+.verified-check {
+    color: #40bcf4;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/* Movie selector dropdown in new-thread form */
+.movie-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #14181c;
+    border: 1px solid #2c3440;
+    border-radius: 3px;
+    color: #9ab;
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.movie-select:focus {
+    border-color: #678;
+    color: #fff;
+}
+
+.movie-select option {
+    background-color: #1c2228;
+    color: #fff;
+}
+
+/* Inline form error message */
+.form-error-msg {
+    color: var(--error-color, #ff4d4f);
+    font-size: 0.9rem;
+    margin: 0 0 14px 0;
+}
+
+/* Login link inside errors */
+.login-link {
+    color: var(--primary-color, #e00054);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.login-link:hover {
+    opacity: 0.8;
+}
+
+.form-group {
+    margin-bottom: 4px;
+}
