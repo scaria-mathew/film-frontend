@@ -46,8 +46,8 @@ function Register() {
         try {
             const { confirmPassword, ...submitData } = formData;
             const data = await registerUser(submitData);
-            alert(data.message);
-            navigate("/verify-otp", { state: { email: formData.email } });
+            alert("Registration successful! You can now log in.");
+            navigate("/login");
         } catch (err) {
             setError(err.message || "Registration failed");
         } finally {
